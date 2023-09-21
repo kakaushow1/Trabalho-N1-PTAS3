@@ -2,25 +2,25 @@ const User = require('../models/User');
 const secret = require('../config/auth.json');
 const jwt = require('jsonwebtoken');
 
-/*
+
 const createUser = async (req, res) => {
-    const {            } = req.body;
+    const { name, email, password } = req.body;
     await User.create({
-       
-
-
+        name: name,
+        email: email,
+        password: password
     }).then(() => {
-        res.json('         ');
-        console.log('           ');
+        res.json('O usuário foi criado');
+        console.log('O usuário foi criado');
     }).catch((erro) => {
-        res.json('             ');
-        console.log(`  : ${erro}`);
+        res.json('Erro na criação do usuário');
+        console.log(`Erro na criação do usuário: ${erro}`);
     })
 }
 const findUsers = async (req, res) => {
-    const     = await User.findAll();
+    const users = await User.findAll();
     try {
-        res.json(    );
+        res.json(users);
     } catch (error) {
         res.status(404).json("Ocorreu um erro na busca!");
     };
@@ -31,22 +31,24 @@ const deleteUser = async (req, res) => {
     try {
         await User.destroy({
             where: {
-                
+                id:id
             }
         }).then(() => {
-            res.json("         ");
+            res.json("O usuário foi deletado");
         })
     } catch (error) {
-        res.status(404).json("      ");
+        res.status(404).json("Erro ao deletar o usuário");
     }
 }
 const updateUser = async (req, res) => {
     const id = parseInt(req.params.id);
-    const {       } = req.body;
+    const { name, email, password } = req.body;
     try {
         await User.update(
             {
-               
+              name: name,
+              email: email,
+              password: password 
             },
             {
                 where: {
@@ -54,37 +56,37 @@ const updateUser = async (req, res) => {
                 }
             }
         ).then(() => {
-            res.json("            ");
+            res.json("O usuário foi atualizado");
         })
     } catch (error) {
-        res.status(404).json("                !");
+        res.status(404).json("Erro ao atualizar o usuário");
     }
 }
 const authenticatedUser = async (req, res) => {
-    const {       } = req.body;
+    const { email, password } = req.body;
     try {
         const isUserAuthenticated = await User.findOne({
             where: {
-                
+                email:email,
+                password:password
             }
         })
         const token = jwt.sign({
-            name: 
-            email: 
+            name: isUserAuthenticated.name,
+            email: isUserAuthenticated.email
         },
             secret.secret, {
             expiresIn: 86400,
         })
         return res.json({
-            name: 
+            name: isUserAuthenticated.name,
             email: isUserAuthenticated.email,
             token: token
         });
     } catch (error) {
-        return res.json("");
+        return res.json("Erro de autenticação");
     }
 }
 
 
 module.exports = { createUser, findUsers, deleteUser, updateUser, authenticatedUser };
-*/
