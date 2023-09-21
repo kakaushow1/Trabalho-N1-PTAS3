@@ -1,14 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API - Users</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>tecnologias</title>
 </head>
-
 <body>
-    <h1>API - USER</h1>
-</body>
+    <header><h1>TRABALHO DE PTAS 3</h1></header>
+    <h3>Tecnologias utilizadas:</h3>
+    <div class="cards">
+        <div class="card1">
+            <li><i class="fas fa-code"></i>   Express.JS<br/> 
+                <p>O Express.js é um framework web altamente popular para Node.js, concebido para simplificar consideravelmente o processo de desenvolvimento de aplicativos web e APIs. Ele funciona como uma camada intermediária entre o servidor e o cliente, proporcionando aos desenvolvedores a capacidade de criar rapidamente rotas, tratar solicitações HTTP, gerenciar middleware e muito mais. Em termos resumidos, o Express.js é empregado nas seguintes áreas:</p>
 
+                <ul>
+                    <li><strong>Roteamento:</strong> Facilita a criação de rotas que definem como as solicitações HTTP são manipuladas e processadas.</li>
+                    <li><strong>Middleware:</strong> Permite a implementação de middleware, que são funções intermediárias que podem ser usadas para executar ações em cada solicitação antes que ela alcance o manipulador final.</li>
+                    <li><strong>Manipulação de Requisições e Respostas:</strong> Torna simples a manipulação de objetos de solicitação (request) e resposta (response) para processamento personalizado.</li>
+                    <li><strong>Gerenciamento de Recursos Estáticos:</strong> Oferece facilidades para servir recursos estáticos, como arquivos CSS, JavaScript e imagens.</li>
+                    <li><strong>Integração com Outras Bibliotecas:</strong> Pode ser integrado facilmente com outras bibliotecas e pacotes para estender as capacidades da aplicação.</li>
+                </ul>
+            
+                <p>No nosso trabalho, o Express.js é empregado em diversos arquivos-chave:</p>
+            
+                <ul>
+                    <li><strong>Arquivo env:</strong> Utilizado para criar o servidor web e gerenciar solicitações HTTP.</li>
+                    <li><strong>userController.js:</strong> Responsável por definir rotas e tratar solicitações HTTP relacionadas a operações de usuário.</li>
+                    <li><strong>routes.js:</strong> Utilizado para construir uma API web, criando um conjunto de rotas (endpoints) para lidar com operações relacionadas a usuários em um aplicativo.</li>
+                    <li><strong>server.js:</strong> Realiza a configuração básica de um servidor web, preparando o ambiente para o uso do Express.js.</li>
+                </ul>
+        </div>
+        <div class="card1">
+            <li><i class="fas fa-database"></i>   PostgreSQL <br/> <p>
+                <p>O PostgreSQL, frequentemente abreviado como "Postgres," é um sistema de gerenciamento de banco de dados relacional de código aberto altamente avançado e amplamente utilizado. Ele é conhecido por sua confiabilidade, desempenho e conjunto abrangente de recursos. O PostgreSQL é uma escolha popular para aplicativos devido à sua robustez. No nosso trabalho, o utilizamos nos seguintes contextos:</p>
+
+                <h2>Arquivo env:</h2>
+                <ul>
+                    <li>Declarando as configurações essenciais para a conexão com o banco de dados, incluindo o nome do banco de dados, o nome de usuário e a senha necessários para acessá-lo.</li>
+                    <li>Especificando o endereço IP do host onde o banco de dados está hospedado.</li>
+                    <li>Definindo a porta que o banco de dados utiliza para aceitar conexões.</li>
+                    <li>Configurando o ambiente de execução da aplicação para interagir com o banco de dados.</li>
+                </ul>
+            
+                <h2>userController.js:</h2>
+                <p>Usado para implementar operações de banco de dados relacionadas a usuários, como criação, leitura, atualização e exclusão de registros.</p>
+            
+
+            </p></li>
+        </div>
+        <div class="card1">
+            <li><i class="fas fa-terminal"></i>   Sequelize CLI <br/> <p>
+                <p>O Sequelize CLI é uma ferramenta de linha de comando amplamente utilizada em conjunto com o Sequelize, que é um ORM (Object-Relational Mapping) para bancos de dados SQL em JavaScript. Essa combinação é especialmente popular no desenvolvimento de aplicativos Node.js, pois simplifica muitas tarefas relacionadas ao gerenciamento de bancos de dados e modelos.</p>
+            
+                <p>O Sequelize CLI desempenha um papel crucial em várias etapas do desenvolvimento de aplicativos, tornando o processo mais eficiente. Suas principais funções incluem:</p>
+                
+                <ul>
+                    <li>Geração de Modelos: Facilita a criação de modelos de dados que representam tabelas no banco de dados, simplificando o processo de definição de estruturas de dados.</li>
+                    <li>Geração de Migrações: Permite criar migrações que descrevem as alterações na estrutura do banco de dados ao longo do tempo, tornando o versionamento do esquema mais gerenciável.</li>
+                    <li>Configuração Simplificada: Ajuda os desenvolvedores a configurar facilmente a conexão com o banco de dados, fornecendo um meio conveniente de gerenciar as informações de configuração.</li>
+                    <li>Seed de Dados: Facilita a inserção inicial de dados no banco de dados para fins de desenvolvimento e teste.</li>
+                    <li>Manutenção do Banco de Dados: Simplifica a manutenção e atualização do banco de dados, tornando mais fácil realizar alterações na estrutura e nos dados.</li>
+                </ul>
+            
+                <p>No nosso trabalho nos usamos o Sequelize no:</p>
+            
+                <ul>
+                    <li><strong>config.js:</strong> Um arquivo de configuração que armazena as configurações necessárias para a aplicação Node.js interagir com o banco de dados usando o Sequelize.</li>
+                    <li><strong>connection.js:</strong> Usado para estabelecer uma conexão autenticada com o banco de dados, com base nas informações de configuração fornecidas.</li>
+                    <li><strong>userController.js:</strong> Utilizado para criar, ler, atualizar e excluir registros no banco de dados, facilitando as operações CRUD (Create, Read, Update, Delete).</li>
+                    <li><strong>Arquivos de Migração:</strong> São usados para descrever e aplicar modificações na estrutura da tabela do banco de dados, permitindo uma evolução controlada do esquema.</li>
+                    <li><strong>Arquivos de Modelo:</strong> Lidam com operações de banco de dados SQL relacionadas à recuperação, manipulação e persistência de dados com base nos modelos definidos.</li>
+                </ul>
+            </p></li>
+        </div> 
+    </div>
+    <h3>Endpoints:</h3>
+    <div class="endpoints">
+        <div class="card1">
+            <ul> 
+                <li><i class="fa-solid fa-route" style="color: #ffffff;"></i>   '/user' (insert)</li>
+                <li><i class="fa-solid fa-route" style="color: #ffffff;"></i>   '/users' (select)</li>
+                <li><i class="fa-solid fa-route" style="color: #ffffff;"></i>   '/user/:id' (delete)</li>
+                <li><i class="fa-solid fa-route" style="color: #ffffff;"></i>   '/user/:id' (update)</li>
+                <li><i class="fa-solid fa-route" style="color: #ffffff;"></i>   '/user/authenticated'</li>
+            </ul>
+        </div>
+    </div>
+</body>
 </html>
